@@ -92,8 +92,8 @@ const Resume = () => {
                     </h2>
                     {feedback ?(
                         <div className="flex  flex-col gap-8 animate-in fade-in duration-1000">
-                            <Summary feedback={{feedback}} />
-                            <ATS feedback={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []}/>
+                            <Summary feedback={feedback} />
+                            <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
                             <Details feedback={feedback}/>
                         </div>
                     ):(
@@ -101,6 +101,7 @@ const Resume = () => {
                     )}
                 </section>
             </div>
+
 
         </main>
     )
